@@ -1,36 +1,76 @@
 # Project 2 @cmda-minor-web · 2018-2019
 
-## Zoek in de de collectie van de OBA
+_Voor het tweede project van de minor Web Development gaan we het bedrijf [ValTech](https://www.valtech.com) een handje helpen. Zij beheren namelijk de website van [Volkswagen](www.volkswagen.com), die ze jaren geleden hebben gemaakt. In de tussentijd is er niks tot weinig veranderd aan de website. Aan ons de taak om de volkswagen website te onderzoeken, op zoek naar verbeteringen in de performance en accessability._
 
-Het project vindt plaats bij in ons eigen lokaal. Maandagochtend is om 9.30 uur de kickoff (bij de oprachtgever), vrijdag zijn de presentaties van de resultaten (bij de opdrachtgever). In een week bouwt iedere student een eigen prototype ter onderbouwing van aanbevelingen aan de opdrachtgevers (Valtech, Mirabeau & CMD Amsterdam). De aanbevelingen betreffen het verbeteren van toegankelijkheid en performance van de web sites / applicaties. Technieken geleerd bij [Browser Technologies](https://github.com/cmda-minor-web/browser-technologies-1819) en [Performance Matters](https://github.com/cmda-minor-web/performance-matters-1819) worden toegepast bij het bouwen van de de prototypes en et schrijven van de aanbevelingen.
+## Table of Content
+1. Opdracht
+2. Onderzoek
+    - 2.1 Performance
+    - 2.2 Accessability
+    - 2.3 Best Practices
+    - 2.4 SEO
+3. Top 5 oplossingen (+ POC)
+    - 3.1 Server-Side rendering
+    - 3.2 Afbeeldingen Compression
+    - 3.3 Kleurencontrast
+    - 3.4 Caching
+    - 3.5 (service worker?)
+4. Conclusie
 
-## Programma
-Maandag - 9.30 - kickoff
-Woensdag - voortgangbespreking
-Vrijdag presentatie
+## Hoofdstuk 1 |  Opdracht
+De opdracht is individueel en duurt een werkweek. Aan het eind van de week (vrijdag) presenteren we ons eindverslag. Hierin moet een 'top 5 oplossingen' staan met daarbij een POC (Prove Of Concept). Hierin laten we zien wat de daadwerkelijke impact van de oplossingen is, en waarom deze van belang is.
 
-## Werkwijze en Criteria
-### Werkwijze
-Full-time week werken aan optimaliseren van toegankelijkheid en performance van een website. Vrijdag is de pitch! Student laat zien dat hij/zij de vakken [Browser Technologies](https://github.com/cmda-minor-web/browser-technologies-1819) en [Performance Matters](https://github.com/cmda-minor-web/performance-matters-1819) begrijpt en beheerst.
+## Hoofdstuk 2 | Onderzoek
+De eerste stap in het zoeken naar improvements van performance en accessability op de [Volkswagen](www.volkswagen.com) site is een onderzoek. Hoe ziet de website er momenteel uit? Wat zijn punten van verbetering?
 
-Iedere dag zijn er coaches aanwezig voor coaching en feedback. We sluiten de dag af met een stand up, om de status door te spreken. Waar ben je mee bezig? Loop je ergens vast of heb je hulp nodig? Waar sta je?
+Om dit te testen heb ik de gebruik gemaakt van de Chrome Dev tools (`Audits` tab). Dit heb ik gedaan in incognitomodus voor de meest accurate testresultaten, omdat er in incocnitomodus geen extensies gebruikt worden. De testresultaten hiervan zijn hieronder te zien...
 
-### Beoordeling
-Tijdens de beoordeling krijg je feedback op het resultaat en op je functioneren. De vakdocenten kijken naar je code en beoordelen In hoeverre je in het project laten zien dat je de bijhorende vakken beheerst en goed hebt toegepast. De opdrachtgver is geïnteresseerd in hoeverre je oplossing voldoet aan de eisen die zijzelf stellen aan hun producten. Misschien laat je wel wat zien waar ze zelf nog niet aan gedacht hebben?
+<img src="https://i.ibb.co/9GWkZL7/image.png">
 
-Het project telt als AVV mee met de Meesterproef.
+**2.1 Performance: 61%**
 
-### Feedback over functioneren
-Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kunnen halen. Welke vaardigheden heb je laten zien? Onderzoekend vermogen? Creativiteit? Conceptueel? In hoeverre komen je houding en verworven vaardigheden overeen met wat een frontender in de praktijk nodig heeft?
+<img src="https://i.ibb.co/y5zWmkq/image.png">
 
-### Browser Technologies
-In het vak [Browser Technologies](https://github.com/cmda-minor-web/browser-technologies-1819)) heb je geleerd wat de core functionalitiet van een web toepassing is en hoe je deze functionaliteit met progressive enhancement kan opbouwen tot een robuste web teopassing. Ook heb je geleerd hoe hiermee de toegankelijkheid van een web toepassing kan worden verbeterd. 
+Op performance scoort de website `61/100`. Dit komt grotendeels omdat de website veel gebruik maakt van afbeeldingen. Afbeeldingen kosten veel meer tijd om te laden dan text, en het is daarom belangrijk dat afbeeldingen op de goede manier ingeladen worden. 
 
-### Performance Matters
-In het vak [Performance Matters](https://github.com/cmda-minor-web/performance-matters-1819) heb je geleerd hoe je een web toepassing (ogenschijnlijk) sneller kan maken en ook offline kan laten werken. Hiermee verbeter je de gebruikservaring van de web toepassing in alle omstandigheden.  
+Een oplossing voor het probleem van lange laadtijd voor afbeeldingen is het gebruik van next-gen image formats, zoals 'WebP' of 'JPEG 2000'. Deze afbeeldingen maken gebruik van veel betere compressie, waardoor de filesize daalt en, je deze sneller kan downloaden en minder datagebruik hebt. Mogelijke winst:
 
+<img src="https://i.ibb.co/bX8rFPW/image.png">
 
-### Oplevering & criteria
-- Presentatie met je bevindingen bij de opdrachtgever. 
-- Github met je code en readme.
+Naast afbeeldingen zijn er nog meer punten van verbetering, zoals het inladen van een standaard font voor het laden van de webfont. Dit zorgt ervoor dat text wel zichtbaar is tijdens het laden van de custom font.
 
+Tot slot wordt er op de site geen gebruik gemaakt van caching. Caching zorgt ervoor dat veel bestanden geen tweede keer geladen hoeven worden, omdat ze op het systeem opgeslagen worden. Hiermee kan een hele hoop tijd gewonnen worden.
+
+**2.2 Accessibility: 81%**
+
+Naast performance is het belangrijk dat de website accessible is. Dit betekend dat de webstie voor zo veel mogelijk mensen te gebruiken is. Denk hierbij aan gebruikers met blind-/slechtziendheid of mensen met kleurenblindheid. Op accessibility scoort de website op dit moment `81/100`.
+
+Kleurencontrast - Volgens de Google Audits tab is het kleurencontrast nog niet perfect. Denk hierbij aan 'lichtblauw op wit' of 'witte text op lichte afbeeldingen'. Zie voorbeelden daarvan hieronder:
+
+<img src="https://i.ibb.co/wyNQBZ6/image.png" width="300">
+<img src="https://i.ibb.co/QrjLS5V/image.png" width="300">
+
+_Verdere onderzoeksresultaten op het gebied van Accessability komen later_
+
+**2.3 Best Practices: 57%**
+
+Op het gebied van Best Practices zijn er meerdere verbeterpunten, de site scoort daarom ook maar `57/100`:
+
+<img src="https://i.ibb.co/ryJb978/image.png">
+
+HTTP - Voor een groot deel van de website wordt op dit moment gebruik gemaakt van het HTTP/1 protocol. Een nieuwere versie van dit protocol is HTTP/2. HTTP/2 biedt vele voordelen ten opzichte van HTTP/1. 
+
+document.write() - Op dit moment wordt er gebruik gemaakt van de document.write functie in javascript. Voor gebruikers met een langzame computer/verbinding kan dit ervoor zorgen dat het laden van de pagina veel langer duurt. Een oplossing voor dit probleem kan server side rendering zijn. Hierbij wordt de pagiana vanaf de server geredendered, in plaats van vanaf de client. Dit heeft naast snelle laadtijd nog meer voordelen.
+
+**2.4 SEO: 100%**
+
+SEO checkt of de website hoog in de Search Engine Rankings staat. Dit is belangrijk voor een website als die van volkswagen, omdat hun product(en) zo veel mogelijk bekeken moet worden. Dit is alleen niet relevant voor de performance en accessability.
+
+## Hoofdstuk 3 | Top 5 oplossingen (+ POC)
+
+In dit hoofdstuk ga ik de volgende oplossingen bespreken:
+- 3.1 Server-Side Rendering
+- 3.2 Afbeeldingen Compression
+- 3.3 Kleurencontrast
+- 3.4 Caching
+- 3.5 
