@@ -1,0 +1,22 @@
+* {
+    font-family: 'MyWebFont', Fallback, sans-serif;
+}
+
+body {
+    margin: 0
+}
+
+section:nth-child(odd) {
+    background: rgb(222, 222, 222);
+    padding: 50px;
+}
+
+section:nth-child(even) {
+    background: rgb(255, 255, 255);
+    padding: 50px;
+}
+
+@font-face {
+    font-family: 'VWTextWeb-Regular';
+    src: url('fonts/VWTextWeb-Regular.woff2') format('woff2')
+}

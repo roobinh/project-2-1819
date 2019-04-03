@@ -74,3 +74,6 @@ In dit hoofdstuk ga ik de volgende oplossingen bespreken:
 - 3.3 Kleurencontrast
 - 3.4 Caching
 - 3.5 
+
+**3.1 Server-Side Rendering**
+Momenteel wordt bij de site veel javascript ingeladen om onder andere afbeeldingen te compressen. Dit zorgt er onder andere voor dat de website geen afbeeldingen weergeeft als je Javascript uit hebt staan. Ook kost het downloaden van alle Javascript extreem veel tijd. Tot slot kost het ook nog veel tijd om de javascript uit te voeren. Om dit te voorkomen kan je ervoor kiezen de website Server-Side te renderen. Dit zorgt ervoor dat alle compressie en rendering wordt gedaan vanaf de server en dan naar de client wordt gestuurd. Dit scheelt veel tijd en maakt het mogelijk de website te runnen zonder Javascript.
