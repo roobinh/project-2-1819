@@ -11,10 +11,10 @@ _Voor het tweede project van de minor Web Development gaan we het bedrijf [ValTe
     - 2.4 SEO
 3. Top 5 oplossingen (+ POC)
     - 3.1 Server-Side rendering
-    - 3.2 Afbeeldingen Compression
-    - 3.3 Kleurencontrast
-    - 3.4 
-    - 3.5 
+    - 3.2 Externe Javascript Verminderen
+    - 3.3 Afbeeldingen
+    - 3.4 Fonts
+    - 3.5 Kleurencontrast
 4. Conclusie
 
 ## Hoofdstuk 1 |  Opdracht
@@ -71,10 +71,10 @@ SEO checkt of de website hoog in de Search Engine Rankings staat. Dit is belangr
 
 In dit hoofdstuk ga ik de volgende oplossingen bespreken:
 - 3.1 Server-Side Rendering
-- 3.2 Afbeeldingen Compression
-- 3.3 Kleurencontrast
-- 3.4 
-- 3.5 
+- 3.2 Externe Javascript
+- 3.3 Afbeeldingen
+- 3.4 Fonts
+- 3.5 Kleurencontrast
 
 ### 3.1 - Server-Side Rendering
 _Let op: in dit hoofdstuk heb ik het over de nodige javascript (dus niet externe javascript)_
@@ -86,14 +86,14 @@ Momenteel wordt bij de site veel Javascript ingeladen om onder andere afbeelding
 Ook kost het downloaden van alle Javascript extreem veel tijd en kost het ook nog veel tijd om de Javascript uit te voeren. Om dit te voorkomen kan je ervoor kiezen de website Server-Side te renderen. Dit zorgt ervoor dat het inladen in de DOM wordt gedaan vanaf de server, en dan naar de client wordt gestuurd. Dit scheelt veel tijd en maakt het mogelijk de website te runnen zonder Javascript. Ook geeft een server-side website, naast tal andere voordelen, ook de mogelijkheid om de afbeeldingen te compressen naar een formaat zoals WebP (zie paragraaf 3.3).  
 
 
-### 3.2 -  Externe JavaScript verminderen
+### 3.2 - Externe JavaScript
 Bij het laden van de volkswagen site worden er veel externe javascript bestanden ingeladen.
 
 <img src="https://i.ibb.co/PDb4gqq/image.png" heigth="300">
 
 Het laden en uitvoeren van deze JavaScript kost extreem veel tijd, vooral voor gebruikers met een langzame verbinding/computer. Het is daarom belangrijk dat er wordt uitgezocht welke van deze Javascript wel en niet noodzakelijk is voor het gebruiken van de website. Omdat ik hier geen kennis over heb, kan ik hier ook geen aanbevelingen over doen. Wel is het een van mijn onderzoeksresultaten waar naar gekeken moet worden. Bij halvering van externe javascript wordt er al 200KB bespaard, naast de runtime die je ermee bespaard.
 
-### 3.3 - Afbeeldingen: Compressie
+### 3.3 - Afbeeldingen
 Op de volkswagen site wordt veel gebruik gemaakt van afbeeldingen. 
 
 <img src="https://i.ibb.co/1qCXHY3/image.png" heigth="300">
