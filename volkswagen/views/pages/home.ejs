@@ -13,46 +13,50 @@
 
 <main>
 
-    <section>
+    <section id="toc">
         <h1>Top 5</h1>
         <ul>
-            <li>1. Server-Side Rendering</li>
-            <li>2. Afbeeldingen Compression</li>
-            <li>3. Kleurencontrast</li>
-            <li>4. Caching</li>
-            <li>5. <i>onbekend</i></li>
+            <li><a href="#1">1. Server-Side Rendering</a></li>
+            <li><a href="#2">2. Afbeeldingen Compression</a></li>
+            <li><a href="#3">3. Kleurencontrast</a></li>
+            <li><a href="#4">4. </a></li>
+            <li><a href="#5">5. </a></li>
         </ul>
     </section>
 
-    <section>
+    <section id="1">
         <h1> 1. Server Side Rendering </h1>
         <p>Deze webpagina wordt Server-Side gerenderd.</p>
-
     </section>
 
-    <section>
+    <section id="2">
         <h1> 2. Afbeeldingen Compression</h1>
         <p>Hieronder zijn twee afbeeldingen te zien.</p>
 
-        
+        <img src="/img/image_1.jpg" width="300">
+        <img src="/img/image_1.webp" width="300">
+
+        <p>De afbeeldingen zijn momenteel op dezelfde grootte als gebruikt op de site. De linker afbeelding is een jpg bestand, 
+            de rechter afbeelding is een webp bestand. Het verschil in bestandsgrootte is 420kb (oud) / 107kb (nieuw) * 100 = 392% kleiner!
+        Deze compressie kan ook server-side gedaan worden, door middel van compressors als deze: <a href="https://www.npmjs.com/package/webp-middleware">webp-middleware</a></a></p>
     </section>
 
-    <section>
+    <section id="3">
         <h1> 3. Kleurencontrast </h1>
-    
-            
+        <p> Op de volkswagen webpage wordt de volgende kleurencontrast gebruikt</p>
+        <div class="blueText"> Blauw op wit</div>
     </section>
 
-    <section>
-        <h1> 4. Caching </h1>
-    
-            
+    <section id="4">
+        <h1 id="fontHead"> header font: Volkswagen Economy Service.</h1>
+        <h1 id="fontText"> text font: Volkswagen Economy Service.</h1>
+        <p>
+        </p>
     </section>
 
-    <section>
+    <section id="5">
         <h1> 5. onbekend </h1>
-    
-            
+          
     </section>
 
 </main>

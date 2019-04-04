@@ -1,5 +1,17 @@
+@font-face {
+    font-family: 'VWText';
+    src: url('fonts/VWTextWeb-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'VWHead';
+    src: url('fonts/VWHeadWeb-Regular.woff2') format('woff2');
+}
+
 * {
-    font-family: 'MyWebFont', Fallback, sans-serif;
+    /* font-family: 'VWText', Fallback, sans-serif; */
+    font-family: sans-serif;
+
 }
 
 body {
@@ -16,7 +28,19 @@ section:nth-child(even) {
     padding: 50px;
 }
 
-@font-face {
-    font-family: 'VWTextWeb-Regular';
-    src: url('fonts/VWTextWeb-Regular.woff2') format('woff2')
+.blueText {
+    color: #00b1eb;
+    font-size: 2em;
 }
+
+.fontHead {
+    font-family: 'VWHead';
+    font-weight: 700;
+}
+
+.fontText {
+    font-family: 'VWText';
+    font-weight: 700;
+}
+
+
