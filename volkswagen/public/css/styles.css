@@ -1,35 +1,49 @@
 @font-face {
     font-family: 'VWText';
-    src: url('fonts/VWTextWeb-Regular.woff2') format('woff2');
+    src: url('/fonts/VWTextWeb-Regular.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'VWHead';
-    src: url('fonts/VWHeadWeb-Regular.woff2') format('woff2');
+    src: url('/fonts/VWHeadWeb-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('/fonts/Roboto-Bold.ttf');
 }
 
 * {
-    /* font-family: 'VWText', Fallback, sans-serif; */
-    font-family: sans-serif;
-
+    font-family: 'RobotoLight', Fallback, sans-serif;
 }
 
-body {
-    margin: 0
+h1 {
+    font-family: 'RobotoBold', fallback, sans-serif;
 }
 
+section {
+    padding: 50px;
+}
 section:nth-child(odd) {
     background: rgb(222, 222, 222);
-    padding: 50px;
 }
 
 section:nth-child(even) {
     background: rgb(255, 255, 255);
-    padding: 50px;
 }
 
-.blueText {
+.blue {
     color: #00b1eb;
+    font-size: 2em;
+}
+
+.darkblue {
+    color: #01295b;
     font-size: 2em;
 }
 

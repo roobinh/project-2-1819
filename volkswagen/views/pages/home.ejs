@@ -13,14 +13,18 @@
 
 <main>
 
+
+        <h1>roobinh/project-2-1819: Optimaliseer toegankelijkheid en performance van volkswagen</h1>
+        <p> Op deze pagina zijn voorbeelden te zien van de oplossingen die ik noem in mijn <a href="https://github.com/roobinh/project-2-1819">readme</a>.</p>
+        
     <section id="toc">
-        <h1>Top 5</h1>
+        <h1>Table of Contents</h1>
         <ul>
             <li><a href="#1">1. Server-Side Rendering</a></li>
-            <li><a href="#2">2. Afbeeldingen Compression</a></li>
-            <li><a href="#3">3. Kleurencontrast</a></li>
-            <li><a href="#4">4. </a></li>
-            <li><a href="#5">5. </a></li>
+            <li><a href="#2">2. Externe Javascript</a></li>
+            <li><a href="#3">3. Afbeeldingen</a></li>
+            <li><a href="#4">4. Fonts</a></li>
+            <li><a href="#5">5. Kleurencontrast</a></li>
         </ul>
     </section>
 
@@ -29,34 +33,44 @@
         <p>Deze webpagina wordt Server-Side gerenderd.</p>
     </section>
 
-    <section id="2">
-        <h1> 2. Afbeeldingen Compression</h1>
+    <section id="5">
+        <h1> 2. Externe Javascript </h1>
+        <p>Ik kan helaas geen demonstratie geven hoe de volkswagen site werkt zonder externe javascript. 
+            Wel kan ik laten zien dat een website prima werkt zonder externe javascript.  :)
+        </p>
+    </section>
+
+    <section id="3">
+        <h1> 3. Afbeeldingen</h1>
         <p>Hieronder zijn twee afbeeldingen te zien.</p>
 
         <img src="/img/image_1.jpg" width="300">
         <img src="/img/image_1.webp" width="300">
 
-        <p>De afbeeldingen zijn momenteel op dezelfde grootte als gebruikt op de site. De linker afbeelding is een jpg bestand, 
-            de rechter afbeelding is een webp bestand. Het verschil in bestandsgrootte is 420kb (oud) / 107kb (nieuw) * 100 = 392% kleiner!
+        <p>De afbeeldingen zijn momenteel op hetzelfde formaat gebruikt als op de volkswagen website. De linker afbeelding is een jpg bestand, 
+            de rechter afbeelding is een webp bestand. In kwaliteit is geen verschil, maar in bestandsgrootte wel: 420kb (oud) / 107kb (nieuw) * 100 = 392% kleiner!
         Deze compressie kan ook server-side gedaan worden, door middel van compressors als deze: <a href="https://www.npmjs.com/package/webp-middleware">webp-middleware</a></a></p>
     </section>
 
-    <section id="3">
-        <h1> 3. Kleurencontrast </h1>
-        <p> Op de volkswagen webpage wordt de volgende kleurencontrast gebruikt</p>
-        <div class="blueText"> Blauw op wit</div>
-    </section>
-
     <section id="4">
-        <h1 id="fontHead"> header font: Volkswagen Economy Service.</h1>
-        <h1 id="fontText"> text font: Volkswagen Economy Service.</h1>
+        <h1> 4. Fonts</h1>
+        <h1 class="fontHead"> Volkswagen Economy Service - VOLKSWAGEN (header font)</h1>
+        <h1 class="fontText"> Volkswagen Economy Service - VOLKSWAGEN (text font)</h1>
         <p>
+            Bovenstaand zijn beide fonts te zien, zonder zichtbaar verschil (zelfs niet in caps). Dit bewijst dat het niet nodig is om beide fonts te laden.
         </p>
     </section>
 
     <section id="5">
-        <h1> 5. onbekend </h1>
-          
+        <h1> 5. Kleurencontrast </h1>
+        <p> Op de volkswagen webpage wordt de volgende kleurencontrast gebruikt</p>
+        <div class="blue"> Blauw op wit</div>
+        <p> Omdat het bovenstaande kleurencontrast lastig te zien is voor mensen met een bepaalde kleurenblindheid,
+            is het beter om de onderstaande kleuren te gebruiken
+        </p>
+        <div class="darkblue">Donkerblauw op wit</div>
+
+
     </section>
 
 </main>
