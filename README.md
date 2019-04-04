@@ -21,13 +21,15 @@ _Voor het tweede project van de minor Web Development gaan we het bedrijf [ValTe
 De opdracht is individueel en duurt een werkweek. Aan het eind van de week (vrijdag) presenteren we ons eindverslag. Hierin moet een 'top 5 oplossingen' staan met daarbij een POC (Prove Of Concept). Hierin laten we zien wat de daadwerkelijke impact van de oplossingen is, en waarom deze van belang is.
 
 ## Hoofdstuk 2 | Onderzoek
-De eerste stap in het zoeken naar improvements van performance en accessability op de [Volkswagen](www.volkswagen.com) site is een onderzoek. Wie gebruiken de website? Hoe ziet de website er momenteel uit? 
+De eerste stap in het zoeken naar improvements van performance en accessability op de [Volkswagen](www.volkswagen.com) site is een onderzoek. 
 
-Om dit te testen heb ik de gebruik gemaakt van de Chrome Dev tools (`Audits` tab). Dit heb ik gedaan in incognitomodus voor de meest accurate testresu  ltaten, omdat er in incocnitomodus geen extensies gebruikt worden. De testresultaten hiervan zijn hieronder te zien...
+Om dit te testen heb ik de gebruik gemaakt van de Chrome Dev tools (`Audits` tab). Dit heb ik gedaan in incognitomodus voor de meest accurate testresultaten, omdat er in incocnitomodus geen extensies/cache gebruikt worden. 
+
+De testresultaten hiervan zijn hieronder te zien:
 
 <img src="https://i.ibb.co/9GWkZL7/image.png">
 
-**2.1 Performance: 61%**
+### 2.1 Performance (61)
 
 <img src="https://i.ibb.co/y5zWmkq/image.png">
 
@@ -40,7 +42,7 @@ Een oplossing voor het probleem van lange laadtijd voor afbeeldingen is het gebr
 Naast afbeeldingen zijn er nog meer punten van verbetering, zoals het inladen van een standaard font voor het laden van de webfont. Dit zorgt ervoor dat text wel zichtbaar is tijdens het laden van de custom font.
 
 
-**2.2 Accessibility: 81%**
+### 2.2 Accessibility (81)
 
 Naast performance is het belangrijk dat de website accessible is. Dit betekend dat de webstie voor zo veel mogelijk mensen te gebruiken is. Denk hierbij aan gebruikers met slechtziendheid of mensen met kleurenblindheid. Omdat volkswagen een automerk is, is de kans dat blinde gebruikers de site bezoeken nihil. Op accessibility scoort de website op dit moment `81/100`.
 
@@ -51,7 +53,7 @@ Kleurencontrast - Volgens de Google Audits tab is het kleurencontrast nog niet p
 
 Ook heb ik de accessability nog getest door middel van de Google Chrome extencie aXe. Dit is, met oplossingen, te lezen in hoofdstuk 3.3.
 
-**2.3 Best Practices: 57%**
+### 2.3 Best Practices (57)
 
 Op het gebied van Best Practices zijn er meerdere verbeterpunten, de site scoort daarom ook maar `57/100`:
 
@@ -61,7 +63,7 @@ HTTP - Voor een groot deel van de website wordt op dit moment gebruik gemaakt va
 
 document.write() - Op dit moment wordt er gebruik gemaakt van de document.write functie in javascript. Voor gebruikers met een langzame computer/verbinding kan dit ervoor zorgen dat het laden van de pagina veel langer duurt. Een oplossing voor dit probleem kan server side rendering zijn. Hierbij wordt de pagiana vanaf de server geredendered, in plaats van vanaf de client. Dit heeft naast snelle laadtijd nog meer voordelen.
 
-**2.4 SEO: 100%**
+### 2.4 SEO (100)
 
 SEO checkt of de website hoog in de Search Engine Rankings staat. Dit is belangrijk voor een website als die van volkswagen, omdat hun product(en) zo veel mogelijk bekeken moet worden. Dit is alleen niet relevant voor de performance en accessability.
 
@@ -74,7 +76,7 @@ In dit hoofdstuk ga ik de volgende oplossingen bespreken:
 - 3.4 
 - 3.5 
 
-**3.1 - Server-Side Rendering**
+### 3.1 - Server-Side Rendering
 Momenteel wordt bij de site veel Javascript ingeladen om onder andere afbeeldingen in te laden. Dit zorgt er onder andere voor dat de website geen afbeeldingen weergeeft als je Javascript uit hebt staan. 
 
 _Let op: in het volgende hoofdstuk heb ik het over externe javascript_
@@ -84,14 +86,14 @@ _Let op: in het volgende hoofdstuk heb ik het over externe javascript_
 Ook kost het downloaden van alle Javascript extreem veel tijd. Tot slot kost het ook nog veel tijd om de Javascript uit te voeren. Om dit te voorkomen kan je ervoor kiezen de website Server-Side te renderen. Dit zorgt ervoor dat het inladen in de DOM wordt gedaan vanaf de server, en dan naar de client wordt gestuurd. Dit scheelt veel tijd en maakt het mogelijk de website te runnen zonder Javascript. Ook geeft een server-side website, naast tal andere voordelen, ook de mogelijkheid om de afbeeldingen te compressen naar een formaat zoals WebP (zie paragraaf 3.3).  
 
 
-**3.2 -  Externe JavaScript verminderen**
+### 3.2 -  Externe JavaScript verminderen
 Bij het laden van de volkswagen site worden er veel externe javascript bestanden ingeladen.
 
 <img src="https://i.ibb.co/PDb4gqq/image.png" heigth="300">
 
 Het laden en uitvoeren van deze JavaScript kost extreem veel tijd, vooral voor gebruikers met een langzame verbinding/computer. Het is daarom belangrijk dat er wordt uitgezocht welke van deze Javascript wel en niet noodzakelijk is voor het gebruiken van de website. Omdat ik hier geen kennis over heb, kan ik hier ook geen aanbevelingen over doen. Wel is het een van mijn onderzoeksresultaten waar naar gekeken moet worden.
 
-**3.3 - Afbeeldingen: Compressie** 
+### 3.3 - Afbeeldingen: Compressie
 Op de volkswagen site wordt veel gebruik gemaakt van afbeeldingen. 
 
 <img src="https://i.ibb.co/1qCXHY3/image.png" heigth="300">
@@ -108,14 +110,14 @@ Bij het sturen van afbeeldingen is wel een probleem: de server moet van te voren
 
 Een andere oplossing voor het gebruik van afbeeldingen maar korte laadtijd is het gebruik van [Lazy Loading](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/). Dit zorgt ervoor dat alle belangrijke elementen (zoals text) eerst worden geladen, en daarna pas alle afbeeldingen/videos/onbelangrijke elementen. Dit zorgt ervoor dat de site veel eerder functioneel is.
 
-**3.4 - Fonts**
+### 3.4 - Fonts
 Bij het laden van de hoofdpagina worden veel bestanden ingeladen. Als je deze bestanden sorteert op grootte, staan de fonts bijna bovenaan.
 
 <img src="https://i.ibb.co/dWxHRHr/image.png" 
 
 Samen maar liefst bijna 400KB, van de totale 3MB die wordt gedownload. Op mijn Live Demo is het verschil tussen 'VWHeadFont' & 'VWTextFont' te zien, namelijk bijna niks. Door alle fonts op de site te veranderen naar `VWTextFont` en 'VWHeadFont' te schrappen bespaar je al 200KB van de totale 3MB (1/15e van totale downloadtijd).
 
-**3.5 - Kleurencontrast**
+### 3.5 - Kleurencontrast
 Voor het testen van de accessability heb ik de Chrome Extensie [aXe](https://www.deque.com/axe/) gebruikt. 
 
 <<img src="https://i.ibb.co/998V1Zy/image.png" heigth="300">
