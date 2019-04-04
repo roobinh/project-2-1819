@@ -3,22 +3,26 @@
 _Voor het tweede project van de minor Web Development gaan we het bedrijf [ValTech](https://www.valtech.com) een handje helpen. Zij beheren namelijk de website van [Volkswagen](www.volkswagen.com), die ze jaren geleden hebben gemaakt. In de tussentijd is er niks tot weinig veranderd aan de website. Aan ons de taak om de volkswagen website te onderzoeken, op zoek naar verbeteringen in de performance en accessability._
 
 ## Table of Content
-1. Opdracht
-2. Onderzoek
+1. [Opdracht](#1)
+2. [Onderzoek](#2)
     - 2.1 Performance
     - 2.2 Accessability
     - 2.3 Best Practices
     - 2.4 SEO
-3. Top 5 oplossingen (+ POC)
+3. [Top 5 oplossingen (+ POC)](#3)
     - 3.1 Server-Side rendering
     - 3.2 Externe Javascript Verminderen
     - 3.3 Afbeeldingen
     - 3.4 Fonts
     - 3.5 Kleurencontrast
-4. Conclusie
+4. [Conclusie](#4)
+
+<a name="1"></a>
 
 ## Hoofdstuk 1 |  Opdracht
 De opdracht is individueel en duurt een werkweek. Aan het eind van de week (vrijdag) presenteren we ons eindverslag. Hierin moet een 'top 5 oplossingen' staan met daarbij een POC (Prove Of Concept). Hierin laten we zien wat de daadwerkelijke impact van de oplossingen is, en waarom deze van belang is.
+
+<a name="2"></a>
 
 ## Hoofdstuk 2 | Onderzoek
 De eerste stap in het zoeken naar improvements van performance en accessability op de [Volkswagen](www.volkswagen.com) site is een onderzoek. 
@@ -66,6 +70,8 @@ document.write() - Op dit moment wordt er gebruik gemaakt van de document.write 
 ### 2.4 SEO (100%)
 
 SEO checkt of de website hoog in de Search Engine Rankings staat. Dit is belangrijk voor een website als die van volkswagen, omdat hun product(en) zo veel mogelijk bekeken moet worden. Dit is alleen niet relevant voor de performance en accessability.
+
+<a name="3"></a>
 
 ## Hoofdstuk 3 | Top 5 oplossingen (+ POC)
 
@@ -118,7 +124,7 @@ Samen maar liefst bijna 400KB, van de totale 3MB die wordt gedownload. Op mijn L
 ### 3.5 - Kleurencontrast
 Voor het testen van de accessability heb ik de Chrome Extensie [aXe](https://www.deque.com/axe/) gebruikt. 
 
-<<img src="https://i.ibb.co/998V1Zy/image.png" heigth="300">
+<img src="https://i.ibb.co/998V1Zy/image.png" heigth="300">
 
 Na het runnen van de audit blijkt het dat er 13 elementen op de pagina niet voldoen aan het juiste kleurencontrast (juist = [WCAG 2 AA contrast ratio thresholds](https://webaim.org/resources/contrastchecker/)). Dit komt vooral door de lichtblauwe kleur die op de site vaker gebruikt wordt:
 
@@ -130,16 +136,17 @@ Deze lichtblauwe kleur op wit voldoet niet aan het WCAG 2AA contrast ratio thres
 
 Deze aanpassing is extreem simpel om toe te passen, en zorgt ervoor dat de site voor iedereen (slechtziend, doof & geen beperkingen) te gebruiken is.
 
+<a name="4"></a>
 
 ## Hoofdstuk 4 | Conclusie
 
 Pas je alle technieken/oplossingen genoemd in dit document bespaar je:
 
-| Aanpassing | Invloed  |   |   |   |
-|--------------------|--------|---|---|---|
-| Afbeeldingen       | 900KB  | (bij compressie)  |   |   |
-| Fonts              | 200KB  |   |   |   |
-| Externe Javascript | 200KB | (bij halvering)  |   |   |
+| Aanpassing | Invloed  |   |
+|--------------------|--------|---|
+| Afbeeldingen       | 900KB  | (bij compressie)  |
+| Fonts              | 200KB  |   |
+| Externe Javascript | 200KB | (bij halvering)  |
 
 
 Totaal = 1300KB (=29% van totale site)
