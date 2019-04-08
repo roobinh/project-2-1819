@@ -30,11 +30,15 @@ section {
     padding: 50px;
 }
 section:nth-child(odd) {
-    background: rgb(222, 222, 222);
+    background: rgb(255, 255, 255);
 }
 
 section:nth-child(even) {
-    background: rgb(255, 255, 255);
+    background: rgb(222, 237, 255);
+}
+
+.header {
+    margin: 3em;
 }
 
 .blue {
@@ -54,7 +58,8 @@ section:nth-child(even) {
 
 .fontText {
     font-family: 'VWText';
-    font-weight: 700;
+    font-weight: 900;
+    letter-spacing: 0.5px;
 }
 
 
